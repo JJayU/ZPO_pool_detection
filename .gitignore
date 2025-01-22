@@ -1,0 +1,5 @@
+/pool_detection/
+/.venv/
+/datasets/
+yolo11n.pt
+dataset.yaml
