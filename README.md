@@ -77,7 +77,10 @@ AT THE TOP OF THIS README ADD AN IMAGE/GIF WITH EXAMPLE MODEL PREICTION, AS A BA
 
 
 - Metrics on the test and train dataset
-# TODO
+  - Train:
+![Train](img/train_metrics.png)
+  - Test:
+![Test](img/test_metrics.png)
 
 ## Trained model in ONNX ready for `Deepness` plugin
 - Model is available in the `model` directory
