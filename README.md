@@ -17,7 +17,7 @@ AT THE TOP OF THIS README ADD AN IMAGE/GIF WITH EXAMPLE MODEL PREICTION, AS A BA
   - pond: 18
 - Annotation Format: YOLO format (.txt files with [class, x_center, y_center, width, height]).
 - Images at 10 cm/px resolution were cut into 511×511 px tiles, with ~10% overlap to avoid losing objects near tile edges.
-- Link to the dataset with annotations: LINK_HERE
+- Link to the dataset with annotations: [LINK_HERE](https://app.roboflow.com/poolsearch2024/pool_searching)
 - Folder structure:
 
       dataset/
