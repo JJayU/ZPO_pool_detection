@@ -75,9 +75,11 @@
 
 - Metrics on the test and train dataset
   - Train:
-![Train](img/train_metrics.png)
+    
+  ![Train](img/train_metrics.png)
   - Test:
-![Test](img/test_metrics.png)
+    
+  ![Test](img/test_metrics.png)
 
 ## Trained model in ONNX ready for `Deepness` plugin
 - Model is available in the `model` directory
