@@ -84,12 +84,13 @@ AT THE TOP OF THIS README ADD AN IMAGE/GIF WITH EXAMPLE MODEL PREICTION, AS A BA
 - After training, the model is converted automatically to ONNX format but needs to have appropriate metadata added to it. In order to do it, run script `add_metadata.py`, modyifing parameters if needed.
 
 ## Demo instructions and video
-- a short video of running the model in Deepness (no need for audio), preferably converted to GIF
-- what ortophoto to load in QGIS and what physical place to zoom-in. E.g. Poznan 2022 zoomed-in at PUT campus
-- showing the results of running the model
 
+![Demo](img/usage_tutorial.gif)
+
+Example was shown on map "Poznan 2023 aerial ortophoto high resolution", available in QMS Plugin.
 ## People
 - Jakub Junkiert - Annotations & Training Scripts - [GitHub](https://github.com/JJayU)
 - Maksymilian Klemenczak - Annotations & Training Scripts - [GitHub](https://github.com/MaksymilianKlemen)
 - Hubert Górecki - Annotations - [GitHub](https://github.com/theHaUBe)
 - Jarosław Kuźma - Annotations - [GitHub](https://github.com/Yerbiff)
+
