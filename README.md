@@ -22,14 +22,36 @@ We reecommend making this README pleaseant to read, you can later use it as port
 - other instructions to reproduce the training process
 
 ## Results
-- Example images from dataset (diverse), at least 4 images
-- Examples of good and bad predictions, at least 4 images
+- Example images from dataset:
+<table>
+  <tr>
+    <td><img src="img/dataset1.png" alt="Image 1" width="300"></td>
+    <td><img src="img/dataset2.png" alt="Image 2" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="img/dataset3.png" alt="Image 3" width="300"></td>
+    <td><img src="img/dataset4.png" alt="Image 4" width="300"></td>
+  </tr>
+</table>
+- Examples of good and bad predictions:
+<table>
+  <tr>
+    <td><img src="img/good_prediction1.png" alt="Image 1" width="300"></td>
+    <td><img src="img/good_prediction2.png" alt="Image 2" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="img/good_prediction3.png" alt="Image 3" width="300"></td>
+    <td><img src="img/bad_prediction1.png" alt="Image 4" width="300"></td>
+  </tr>
+</table>
+
+
 - Metrics on the test and train dataset
+# TODO
 
 ## Trained model in ONNX ready for `Deepness` plugin
-- model uploaded to XXX and a LINK_HERE
-- model have to be in the ONNX format, including metadata required by `Deepness` plugin (spatial resolution, thresholds, ...)
-- name of the script used to convert the model to ONNX and add the metadata to it
+- Model is available in the `model` directory
+- After training, the model is converted automatically to ONNX format but needs to have appropriate metadata added to it. In order to do it, run script `add_metadata.py`, modyifing parameters if needed.
 
 ## Demo instructions and video
 - a short video of running the model in Deepness (no need for audio), preferably converted to GIF
@@ -37,4 +59,7 @@ We reecommend making this README pleaseant to read, you can later use it as port
 - showing the results of running the model
 
 ## People
-- who worked on the project
+- Jakub Junkiert - Annotations & Training Scripts - [GitHub](https://github.com/JJayU)
+- Maksymilian Klemenczak - Annotations & Training Scripts - [GitHub](https://github.com/MaksymilianKlemen)
+- Hubert Górecki - Annotations - [GitHub](https://github.com/theHaUBe)
+- Jarosław Kuźma - Annotations - [GitHub](https://github.com/Yerbiff)
