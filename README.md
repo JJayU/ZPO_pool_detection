@@ -1,9 +1,6 @@
-# ZPO Project - Your Deepness Model
-This is a template for a Project.
-Please follow the structure below and address all required points.
-Please put it in a public repository.
+# ZPO Project - Pool Detection Model
 
-AT THE TOP OF THIS README ADD AN IMAGE/GIF WITH EXAMPLE MODEL PREICTION, AS A BANNER
+![Banner](img/banner.png)
 
 ## Dataset
 - Data Source: Satellite images of Poznan 2023 
