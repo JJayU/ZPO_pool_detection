@@ -5,21 +5,51 @@ Please put it in a public repository.
 
 AT THE TOP OF THIS README ADD AN IMAGE/GIF WITH EXAMPLE MODEL PREICTION, AS A BANNER
 
-We reecommend making this README pleaseant to read, you can later use it as portfolio `:)`
-
 ## Dataset
-- on what data trained
-- how many annotations
-- how the data was prepared (e.g. preprocessed)
-- store the dataset with annotations in XXX and provide a link here
-- what format for data and how to load it
+- Data Source: Satellite images of Poznan 2023 
+- Number of Images: 6382 images total:
+  - Train: 4467 images (70%),
+  - Validation: 1277 images (20%),
+  - Test: 638 images (10%)
+- Number of Annotations:
+  - free standing pool: 420,
+  - pernament_pool: 36,
+  - pond: 18
+- Annotation Format: YOLO format (.txt files with [class, x_center, y_center, width, height]).
+- Images at 10 cm/px resolution were cut into 511×511 px tiles, with ~10% overlap to avoid losing objects near tile edges.
+- Link to the dataset with annotations: LINK_HERE
+- Folder structure:
+
+      dataset/
+      ├─ train/
+      │    ├─ images/
+      │    └─ labels/
+      ├─ valid/
+      │    ├─ images/
+      │    └─ labels/
+      └─ test/
+       ├─ images/
+       └─ labels/
+
+
+- Configuration: The file data.yaml points to the train/validation/test subsets and class names
+- Loading: The YOLO (ultralytics) library automatically loads images and labels from data.yaml.
 
 ## Training
-- what network, how trained, what parameters
-- what augmentation methods used
-- what script to run the training
-- remember to have a fully specified Python environemnt (Python version, requirements list with versions)
-- other instructions to reproduce the training process
+- Model: YOLOv11 with pretrained weights: yolo11n.pt (n - small version)
+- Training parameters:
+  - epochs=50,
+  - imgsz (image size)=512,
+  - batch=16,
+- Augmentation parameters used in training:
+  - degrees: 10.0 (±10° rotation),
+  - translate: 0.1 (up to 10% translation),
+  - scale: 0.5 (scaling range from 50% to 150%),
+  - shear: 2.0 (shearing up to ±2°),
+  - flipud: 0.5 (vertical flip),
+  - fliplr: 0.5 (horizontal flip) 
+- The script to run the training: train.py
+- Python version: 3.10, requirements list with versions in requirements.txt
 
 ## Results
 - Example images from dataset:
