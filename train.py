@@ -3,7 +3,7 @@ import yaml
 import torch
 from ultralytics import YOLO
 
-# Zakładamy strukturę folderów:
+# Folder structure should look like this:
 # - dataset/
 #   - train/
 #     - images/
@@ -14,32 +14,32 @@ from ultralytics import YOLO
 #   - test/
 #     - images/
 #     - labels/
+#   - data.yaml
 
-# Zakładamy, że plik dataset/data.yaml już istnieje
+# Load YOLO model
+model = YOLO('yolo11m.pt')
 
-# Załaduj pretrenowany model YOLOv11
-model = YOLO('yolo11n.pt')  # Wybór wersji modelu (n=mały, s=średni, itd.)
-
-# Dodanie augmentacji danych
+# Augmentations
 augmentation_params = {
     'degrees': 10.0,
     'translate': 0.1,
     'scale': 0.5,
     'shear': 2.0,
-    'flipud': 0.5,  # Flip up-down
-    'fliplr': 0.5   # Flip left-right
+    'flipud': 0.5,
+    'fliplr': 0.5
 }
 
-# Trening modelu
+# Model training
 model.train(
     data='datasets/data.yaml',
-    epochs=50,  # Liczba epok
-    imgsz=512,  # Rozdzielczość obrazu
-    batch=16,  # Rozmiar batcha
+    epochs=50,  # Epoch count
+    imgsz=512,  # Img resolution
+    batch=16,
     project='pool_detection',
     name='exp',
-    augment=True,  # Włączenie augmentacji
+    augment=True,
     **augmentation_params
 )
 
+# Export to onnx
 model.export(format='onnx')
